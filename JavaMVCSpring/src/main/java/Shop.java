@@ -1,6 +1,4 @@
-@Entity
 
 public class Shop {
-	
 
 }
