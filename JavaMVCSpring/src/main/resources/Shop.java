@@ -1,0 +1,6 @@
+@Entity
+
+public class Shop {
+	
+
+}
