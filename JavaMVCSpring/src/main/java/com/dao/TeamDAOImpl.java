@@ -1,5 +1,12 @@
 package com.dao;
 
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.model.Team;
 
 @Repository
@@ -33,9 +40,15 @@ public class TeamDAOImpl implements TeamDAO {
     }  
   
     @SuppressWarnings("unchecked")  
-    public List<team> getTeams() {  
+    public List<Team> getTeam() {  
         return getCurrentSession().createQuery("from Team").list();  
-    }  
+    }
+
+	@Override
+	public List<Team> getTeam() {
+		// TODO Auto-generated method stub
+		return null;
+	}  
   
 	
 }

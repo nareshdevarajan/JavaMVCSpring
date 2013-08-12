@@ -1,5 +1,15 @@
 package com.service;
 
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+
+
+import com.dao.TeamDAO;
 import com.model.Team;
 @Service  
 @Transactional  
@@ -27,9 +37,15 @@ public class TeamServiceImpl implements TeamService {
 		// TODO Auto-generated method stub
 		 teamDAO.deleteTeam(id); 
 	}
-	public List<team> getTeams() {  
-        return teamDAO.getTeams();  
-    }  
+	public List<Team> getTeam() {  
+        return teamDAO.getTeam();  
+    }
+
+	@Override
+	public java.util.List<Team> getTeam() {
+		// TODO Auto-generated method stub
+		return null;
+	}  
   
 
 }

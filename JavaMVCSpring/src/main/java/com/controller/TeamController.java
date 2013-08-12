@@ -2,6 +2,14 @@ package com.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.model.Team;
 import com.service.TeamService;
 
@@ -34,7 +42,7 @@ public class TeamController {
     public ModelAndView listOfTeams() {  
         ModelAndView modelAndView = new ModelAndView("list-of-teams");  
           
-        List<team> teams = teamService.getTeams();  
+        List<Team> teams = teamService.getTeams();  
         modelAndView.addObject("teams", teams);  
           
         return modelAndView;  
